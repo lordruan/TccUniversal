@@ -1,0 +1,27 @@
+﻿<UserControl
+    x:Class="TccUniversal.postControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TccUniversal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="540" d:DesignWidth="359" Width="360" Height="500">
+
+    <StackPanel BorderBrush="Black" RelativePanel.AlignRightWithPanel="True">
+        <Grid x:Name="dafoultNewPost" x:FieldModifier="public" Height="Auto" Width="Auto" Holding="dafoultNewPost_Holding" Tapped="dafoultNewPost_Tapped" BorderBrush="#FF0555FF">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="image" Height="*"/>
+                <RowDefinition x:Name="detalhes" Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="imagePost" x:FieldModifier="public" Grid.Row="0" Margin="10,0,-10,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image x:Name="imgPost" x:FieldModifier="public" Width="Auto" Height="Auto" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Assets/StoreLogo.png" />
+            </Grid>
+            <Grid Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="360" Background="#FF3B538C">
+                <Grid Grid.Column="1" Margin="10,0,-10,0">
+                    <TextBlock x:Name="description" x:FieldModifier="public" Text="Detalhes #TaBarato #TudoDeBom #TudoDeBom #TudoDeBom" FontSize="24" LineHeight="24" Height="Auto" Width="Auto" TextAlignment="Center" TextWrapping="Wrap"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </StackPanel>
+</UserControl>

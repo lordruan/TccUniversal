@@ -1,0 +1,168 @@
+﻿<Page
+    x:Class="TccUniversal.FeedPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TccUniversal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+
+    <Grid x:Name="principalTudo" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MainGrid.Margin" Value="24"/>
+                        <Setter Target="MainGrid.RowDefinitions[1].Height" Value="auto"/>
+                        <Setter Target="MainGrid.ColumnDefinitions[1].Width" Value="*"/>
+                        <Setter Target="content.Margin" Value="0 0 6 0"/>
+                        <Setter Target="content1.Margin" Value="6 0 0 0"/>
+                        <Setter Target="content1.(Grid.Column)" Value="1"/>
+                        <Setter Target="content1.(Grid.Row)" Value="0"/>
+                        <Setter Target="content2.(Grid.Column)" Value="2"/>
+                        <Setter Target="content2.(Grid.Row)" Value="0"/>
+                        <Setter Target="content3.(Grid.Column)" Value="3"/>
+                        <Setter Target="content3.(Grid.Row)" Value="0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MainGrid.Margin" Value="12"/>
+                        <Setter Target="content.Margin" Value="0 0 0 6"/>
+                        <Setter Target="content1.Margin" Value="0 6 0 0"/>
+                        <Setter Target="MainGrid.RowDefinitions[1].Height" Value="*"/>
+                        <Setter Target="MainGrid.ColumnDefinitions[1].Width" Value="auto"/>
+                        <Setter Target="content1.(Grid.Column)" Value="0"/>
+                        <Setter Target="content1.(Grid.Row)" Value="1"/>
+                        <Setter Target="content1.Margin" Value="6 0 0 0"/>
+                        <Setter Target="content1.(Grid.Column)" Value="0"/>
+                        <Setter Target="content1.(Grid.Row)" Value="1"/>
+                        <Setter Target="content2.(Grid.Column)" Value="0"/>
+                        <Setter Target="content2.(Grid.Row)" Value="2"/>
+                        <Setter Target="content3.(Grid.Column)" Value="0"/>
+                        <Setter Target="content3.(Grid.Row)" Value="3"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <!-- Divisão da página em duas linhas (topo e restante da tela) -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- Definição do topo -->
+        <Grid  Height="50" Background="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <!-- Botão que irá abrir o painel para exibir o menu hambuger -->
+            <StackPanel Grid.Column="0" HorizontalAlignment="Left">
+                <Button x:Name="btnHamburger" Grid.Column="0" FontFamily="Segoe MDL2 Assets" Content="" Width="50" Height="50" Grid.Row="0" Background="Transparent" Click="btnHamburger_Click" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="brand"  HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Text="Ruan TCC"  FontSize="28" Foreground="Black" SelectionHighlightColor="#FF000CF9"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button x:Name="btnFiltro"  FontFamily="Segoe MDL2 Assets" Content="" Width="50" Height="50" Grid.Row="0" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0" Click="btnFiltro_Click" />
+            </StackPanel>
+        </Grid>
+        <!-- Definição do SplitView -->
+        <SplitView Name="meuSplitView" DisplayMode="Overlay" IsPaneOpen="False" FlowDirection="LeftToRight" RequestedTheme="Dark" CompactPaneLength="50" OpenPaneLength="250" Grid.Row="1">
+            <!-- Painel de navegação -->
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="btnPerfil" FontFamily="Segoe MDL2 Assets" Content="" Width="50" Height="50" Background="Transparent" />
+                            <TextBlock Name="txtPerfil" Text="Perfil" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Name="Sair" Orientation="Horizontal" Tapped="sair_Tapped">
+                            <Button Name="bntSair" FontFamily="Segoe MDL2 Assets" Content="" Width="50" Height="50" Background="Transparent" />
+                            <TextBlock Text="Sair" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2">
+                        <StackPanel x:Name="postar" Orientation="Horizontal" Tapped="postar_Tapped">
+                            <Button Name="btnPostar" FontFamily="Segoe MDL2 Assets" Content="" Width="50" Height="50" Background="Transparent" />
+                            <TextBlock Text="Postar" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel x:Name="update" Orientation="Horizontal" Tapped="update_Tapped">
+                            <Button Name="btnAtualizar" FontFamily="Segoe MDL2 Assets" Content="" Width="50" Height="50" Background="Transparent"/>
+                            <TextBlock Text="Atualizar Feed" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </SplitView.Pane>
+            <!-- Painel de conteúdo -->
+            <SplitView.Content>
+                <SplitView Name="filtroSplit" PanePlacement="Right" DisplayMode="Overlay" IsPaneOpen="False" FlowDirection="LeftToRight" RequestedTheme="Dark" CompactPaneLength="50" OpenPaneLength="250">
+                    <!-- Painel de filtro -->
+                    <SplitView.Pane>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="1">
+                                <StackPanel>
+                                    <TextBlock Text="Categorias:" FontSize="24" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel>
+                                    <ComboBox x:Name="ctgCbox" Margin="20,2" HorizontalAlignment="Stretch" SelectionChanged="ctgCbox_SelectionChanged" />
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2">
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Name="btnPesquisar" FontFamily="Segoe MDL2 Assets" Content="" Width="50" Height="50" Background="Transparent"/>
+                                    <TextBlock Text="Pesquisar" FontSize="18" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </SplitView.Pane>
+                    <SplitView.Content>
+                        <ScrollViewer x:Name="contentScroll" Background="#FFF6F6F6" Width="Auto" >
+                            <Grid Width="Auto" Height="Auto" Name="MainGrid" MinHeight="400" MinWidth="400">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <StackPanel x:Name="content" Grid.Column="0" Grid.Row="0">
+                                </StackPanel>
+                                <StackPanel x:Name="content1" Grid.Column="1" Grid.Row="0">
+                                </StackPanel>
+                                <StackPanel x:Name="content2" Grid.Column="2" Grid.Row="0">
+                                </StackPanel>
+                                <StackPanel x:Name="content3" Grid.Column="3" Grid.Row="0">
+                                </StackPanel>
+                            </Grid>
+                        </ScrollViewer>
+                    </SplitView.Content>
+                </SplitView>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+
+</Page>

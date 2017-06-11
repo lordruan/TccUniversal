@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="TccUniversal.Posts">
+    <Position X="11.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAEABAAAUAAAAAIAAAIAA=</HashCode>
+      <FileName>Posts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TccUniversal.PostsResponse">
+    <Position X="14" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAEABAAAUAAAAAIAAAIgA=</HashCode>
+      <FileName>PostsResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TccUniversal.ServicoDados" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQAAAAAAAAAAAAAAAAAAQAAABAAAAAAAACgAAQ=</HashCode>
+      <FileName>ServicoDados.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.User">
+    <Position X="10.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIgAAEAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TccUniversal.UserResponse">
+    <Position X="14" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIgAAEgA=</HashCode>
+      <FileName>UserResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TccUniversal.Validacoes">
+    <Position X="15.5" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validacoes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TccUniversal.RegistrarPage" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="6.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>RegistrarPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.PostPage" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAUAABAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>PostPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.postControl" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAA=</HashCode>
+      <FileName>postControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.MainPage" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAgACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.LoginPage" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="0.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAgABAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.FeedPage" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="3.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAIAAAACAAACAKCAQAAREACAABAGgAAACAAAA=</HashCode>
+      <FileName>FeedPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.EditingPage" BaseTypeListCollapsed="true">
+    <Position X="5" Y="9.75" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AABAAABAAABQAAAAAAAAAAQAABAAgAgAACAAAAABAAA=</HashCode>
+      <FileName>EditingPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TccUniversal.Constantes">
+    <Position X="15.25" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Constantes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TccUniversal.App">
+    <Position X="12" Y="10.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AqAAAAAAAAAQAIAgIAAAIABAAAAgAAAAwAiAYAAIEAg=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="TccUniversal.IServicoDados">
+    <Position X="0.5" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
+      <FileName>IServicoDados.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Windows.UI.Xaml.Markup.IComponentConnector">
+    <Position X="1" Y="11.75" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Windows.UI.Xaml.Markup.IComponentConnector2">
+    <Position X="1" Y="13" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider">
+    <Position X="0.75" Y="14.5" Width="4" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
